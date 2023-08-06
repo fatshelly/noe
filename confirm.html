@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoE</title>
+    <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="page_header" class="header">
+        <h1 class="site_title">
+            <a href="index.html">
+                <img src="img/logo.svg" class="pc" alt="NoE">
+                <img src="img/logo_sp.svg" class="sp" alt="NoE">
+            </a>
+        </h1>
+        <nav id="nav">
+            <a class="logo" href="index.html"><img src="img/logo_sp.svg" alt="NoE"></a>
+            <ul class="nav_flex">
+                <li>
+                    <a href="index.html">トップ</a>
+                </li>
+                <li>
+                    <a href="company.html">会社概要</a>
+                </li>
+                <li>
+                    <a href="business.html">事業内容</a>
+                </li>
+                <li>
+                    <a href="news.html">ニュース</a>
+                </li>
+                <li>
+                    <a href="contact.html">コンタクト</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu_bar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main id="confirm" class="main section">
+        <section class="container">
+            <h2 class="section_heading"><span class="sub_heading">コンタクト</span>CONTACT</h2>
+            <div class="inner">
+                <form action="" method="post">
+                    <!-- valueの中にphpが入る -->
+                    <input type="hidden" name="classification" value="<?php echo $classification; ?>">
+                    <input type="hidden" name="name" value="<?php echo $name; ?>">
+                    <input type="hidden" name="email" value="<?php echo $email; ?>">
+                    <input type="hidden" name="tel" value="<?php echo $tel; ?>">
+                    <input type="hidden" name="company" value="<?php echo $company; ?>">
+                    <input type="hidden" name="department" value="<?php echo $department; ?>">
+                    <input type="hidden" name="content" value="<?php echo $content; ?>">
+
+                    <form action="">
+                        <div class="confirmation_box">
+
+                            <h3 class="info_title">送信内容の確認</h3>
+                            <p class="double_check">ご入力内容にお間違いがないか確認してください。</p>
+
+
+                            <dl class="answer">
+                                <dt><label for="classification">お問い合わせ種別</label></dt>
+                                <dd>php echo $classification;</dd>
+                                <dt><label for="name">名前</label></dt>
+                                <dd>php echo $name;</dd>
+                                <dt><label for="email">メールアドレス<span class="required">※</span></label></dt>
+                                <dd>php echo $email;</dd>
+                                <dt><label for="tel">電話番号<span class="required">※</span></label></dt>
+                                <dd>php echo $tel; </dd>
+                                <dt><label for="company">会社名</label></dt>
+                                <dd>php echo $company;</dd>
+                                <dt><label for="department">部署名</label></dt>
+                                <dd>php echo $department;</dd>
+                                <dt><label for="content">お問合せ内容</label></dt>
+                                <dd>php echo $content;</dd>
+                            </dl>
+                        </div>
+                        <div class="btn_box inner_wrap">
+                            <input class="btn" type="button" value="修正する" onclick="history.back(-1)">
+                            <button class="btn" type="submit" name="submit">送信する</button>
+                        </div>
+                    </form>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="flex container">
+            <div class="footer_logo">
+                <img src="img/logo.svg" alt="Noe">
+            </div>
+
+            <ul class="nav_flex">
+                <div class="left_list">
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="news.html">ニュース</a></li>
+                    <li><a href="business.html">事業内容</a></li>
+                </div>
+                <div class="right_list">
+                    <li><a href="company.html">会社概要</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="specified.html">特定商取引に基づく表記</a></li>
+                </div>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
